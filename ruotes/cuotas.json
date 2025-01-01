@@ -1,0 +1,14 @@
+[
+  {
+    "personaId": "1",
+    "cuotaId": "1",
+    "monto": "2000",
+    "estado": "1"
+  },
+  {
+    "personaId": "1",
+    "cuotaId": "2",
+    "monto": "6000",
+    "estado": "1"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "personaId": "1",
+    "nombres": "Edson Antonio",
+    "apellidos": "Espinoza Rodríguez",
+    "numero": "922006477",
+    "ubicacion": "Urbanización Previ Callao Mz 41 Lt 5",
+    "estado": "1"
+  },
+  {
+    "personaId": "2",
+    "nombres": "Zaira Nathaly",
+    "apellidos": "Espinoza Rodríguez",
+    "numero": "978891282",
+    "ubicacion": "Urbanización Previ Callao Mz 41 Lt 5",
+    "estado": "0"
+  }
+]
