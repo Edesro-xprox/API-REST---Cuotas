@@ -1,14 +1,50 @@
 [
   {
-    "personaId": "1",
-    "cuotaId": "1",
-    "monto": "2000",
-    "estado": "1"
+    "personaId": 1,
+    "cuotaId": 1,
+    "monto": 56000,
+    "estado": true
   },
   {
-    "personaId": "1",
-    "cuotaId": "2",
-    "monto": "6000",
-    "estado": "1"
+    "personaId": 1,
+    "cuotaId": 2,
+    "monto": 13000,
+    "estado": true
+  },
+  {
+    "personaId": 1,
+    "cuotaId": 3,
+    "monto": 28000,
+    "estado": true
+  },
+  {
+    "personaId": 1,
+    "cuotaId": 4,
+    "monto": 353000,
+    "estado": true
+  },
+  {
+    "personaId": 2,
+    "cuotaId": 1,
+    "monto": 3000,
+    "estado": true
+  },
+  {
+    "personaId": 2,
+    "cuotaId": 2,
+    "monto": 3000,
+    "estado": false
+  },
+  {
+    "personaId": 3,
+    "cuotaId": 1,
+    "monto": 100000,
+    "estado": true
+  },
+  {
+    "personaId": 3,
+    "cuotaId": 2,
+    "monto": 200000,
+    "estado": true
   }
 ]

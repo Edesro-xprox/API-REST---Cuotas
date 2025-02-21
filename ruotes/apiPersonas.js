@@ -16,7 +16,7 @@ router.get('/personas/',(req,res) =>{
     if(data.length > 0){
         res.json(data);    
     }else{
-        res.send({"message":"No hay data"});
+        res.send([]);
     }
 });
 
@@ -25,24 +25,26 @@ router.get('/personas/:id',(req,res) =>{
     if(data.some(p => p.personaId == req.params.id)){
         res.json(data.filter(p => p.personaId == req.params.id))
     }else{
-        res.send({"message":`No existe data con ese id igual a ${req.params.id}`});
+        res.send([]);
     }
 })
 
 router.post('/personas/',(req,res) =>{
     let data = readJsonFile();
-    let ids = null, objeto = null;
+    let ids = null, objeto = null, maxId = null;
 
-    if(data.length > 0){
-        ids = data.map(p => p.personaId);
-        objeto = {
-            personaId: (Math.max(...ids) + 1).toString(),
-            nombres: req.body.nombres,
-            apellidos: req.body.apellidos,
-            numero: req.body.numero,
-            ubicacion: req.body.ubicacion,
-            estado: req.body.estado
-        }
+    ids = data.map(p => p.personaId);
+
+    maxId = ids.length > 0 ? Math.max(...ids) : 0;
+
+    objeto = {
+        personaId: maxId + 1,
+        nombres: req.body.nombres,
+        apellidos: req.body.apellidos,
+        numero: req.body.numero,
+        ubicacion: req.body.ubicacion,
+        monto: req.body.monto,
+        estado: req.body.estado
     }
 
     data.push(objeto);
@@ -50,7 +52,7 @@ router.post('/personas/',(req,res) =>{
     const personasCurrent = JSON.stringify(data,null,2);
     fs.writeFileSync(filePath,personasCurrent,'utf-8');
 
-    res.json(objeto)
+    res.json([objeto])
 });
 
 router.put('/personas/:id',(req,res) =>{
@@ -62,6 +64,7 @@ router.put('/personas/:id',(req,res) =>{
             p.apellidos = req.body.apellidos,
             p.numero = req.body.numero,
             p.ubicacion = req.body.ubicacion,
+            p.monto = req.body.monto,
             p.estado = req.body.estado
         }
     })
@@ -71,6 +74,21 @@ router.put('/personas/:id',(req,res) =>{
 
     res.json(data.filter(p => p.personaId == req.params.id));
 });
+
+router.put('/personas/estado/:id',(req,res) =>{
+    let data = readJsonFile();
+
+    data.forEach(p =>{
+        if(p.personaId == req.params.id){
+            p.estado = req.body.estado
+        }
+    })
+
+    const personasCurrent = JSON.stringify(data,null,2);
+    fs.writeFileSync(filePath,personasCurrent,'utf-8');
+
+    res.json(data.filter(p => p.personaId == req.params.id));
+})
 
 router.delete('/personas/:id',(req,res) =>{
     let data = readJsonFile();

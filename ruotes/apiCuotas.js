@@ -17,7 +17,7 @@ router.get('/cuotas/', (req, res) => {
     if(data.length > 0){
         res.json(data);    
     } else {
-        res.send({"message":"No hay data"});
+        res.send([]);
     }
 });
 
@@ -27,7 +27,7 @@ router.get('/cuotas/:personaId/:cuotaId', (req, res) => {
     if(data.some(c => c.personaId == req.params.personaId && c.cuotaId == req.params.cuotaId)){
         res.json(data.filter(c => c.personaId == req.params.personaId && c.cuotaId == req.params.cuotaId));
     } else {
-        res.send({"message":`No existe data con personaId igual a ${req.params.personaId} y cuotaId igual a ${req.params.cuotaId}`});
+        res.send([]);
     }
 });
 
@@ -43,14 +43,14 @@ router.post('/cuotas/', (req, res) => {
         ids = personaData.map(c => c.cuotaId);
         objeto = {
             personaId: req.body.personaId,
-            cuotaId: (Math.max(...ids) + 1).toString(),
+            cuotaId: (Math.max(...ids) + 1),
             monto: req.body.monto,
             estado: req.body.estado
         }
     } else {
         objeto = {
             personaId: req.body.personaId,
-            cuotaId: "1",
+            cuotaId: 1,
             monto: req.body.monto,
             estado: req.body.estado
         }
@@ -61,7 +61,7 @@ router.post('/cuotas/', (req, res) => {
     const cuotasCurrent = JSON.stringify(data, null, 2);
     fs.writeFileSync(filePath, cuotasCurrent, 'utf-8');
 
-    res.json(objeto);
+    res.json([objeto]);
 });
 
 // Solicitud PUT para reemplazar la data respecto a cuotaId y personaId

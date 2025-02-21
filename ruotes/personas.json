@@ -1,18 +1,29 @@
 [
   {
-    "personaId": "1",
+    "personaId": 1,
     "nombres": "Edson Antonio",
     "apellidos": "Espinoza Rodríguez",
     "numero": "922006477",
-    "ubicacion": "Urbanización Previ Callao Mz 41 Lt 5",
-    "estado": "1"
+    "ubicacion": "Calle 211",
+    "monto": 450000,
+    "estado": true
   },
   {
-    "personaId": "2",
+    "personaId": 2,
     "nombres": "Zaira Nathaly",
     "apellidos": "Espinoza Rodríguez",
     "numero": "978891282",
-    "ubicacion": "Urbanización Previ Callao Mz 41 Lt 5",
-    "estado": "0"
+    "ubicacion": "Las Amanitas",
+    "monto": "6000",
+    "estado": true
+  },
+  {
+    "personaId": 3,
+    "nombres": "Icker Antonio",
+    "apellidos": "Espinoza Rodríguez",
+    "numero": "944005677",
+    "ubicacion": "Las Amanitas",
+    "monto": "350000",
+    "estado": false
   }
 ]
