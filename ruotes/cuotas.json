@@ -3,7 +3,7 @@
     "personaId": 1,
     "cuotaId": 1,
     "monto": 56000,
-    "estado": true
+    "estado": false
   },
   {
     "personaId": 1,
@@ -15,12 +15,6 @@
     "personaId": 1,
     "cuotaId": 3,
     "monto": 28000,
-    "estado": true
-  },
-  {
-    "personaId": 1,
-    "cuotaId": 4,
-    "monto": 353000,
     "estado": true
   },
   {
@@ -45,6 +39,48 @@
     "personaId": 3,
     "cuotaId": 2,
     "monto": 200000,
+    "estado": true
+  },
+  {
+    "personaId": 1,
+    "cuotaId": 4,
+    "monto": 353000,
+    "estado": true
+  },
+  {
+    "personaId": 4,
+    "cuotaId": 1,
+    "monto": 8000,
+    "estado": true
+  },
+  {
+    "personaId": 4,
+    "cuotaId": 2,
+    "monto": 4000,
+    "estado": true
+  },
+  {
+    "personaId": 5,
+    "cuotaId": 1,
+    "monto": 2000,
+    "estado": true
+  },
+  {
+    "personaId": 5,
+    "cuotaId": 2,
+    "monto": 10000,
+    "estado": true
+  },
+  {
+    "personaId": 6,
+    "cuotaId": 1,
+    "monto": 1000,
+    "estado": true
+  },
+  {
+    "personaId": 6,
+    "cuotaId": 2,
+    "monto": 500,
     "estado": true
   }
 ]

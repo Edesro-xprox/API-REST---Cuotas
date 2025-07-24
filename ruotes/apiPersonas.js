@@ -16,7 +16,7 @@ router.get('/personas/',(req,res) =>{
     if(data.length > 0){
         res.json(data);    
     }else{
-        res.send([]);
+        res.json([]);
     }
 });
 
@@ -25,7 +25,7 @@ router.get('/personas/:id',(req,res) =>{
     if(data.some(p => p.personaId == req.params.id)){
         res.json(data.filter(p => p.personaId == req.params.id))
     }else{
-        res.send([]);
+        res.json([]);
     }
 })
 
@@ -64,8 +64,7 @@ router.put('/personas/:id',(req,res) =>{
             p.apellidos = req.body.apellidos,
             p.numero = req.body.numero,
             p.ubicacion = req.body.ubicacion,
-            p.monto = req.body.monto,
-            p.estado = req.body.estado
+            p.monto = req.body.monto
         }
     })
 

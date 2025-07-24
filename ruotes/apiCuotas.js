@@ -17,7 +17,7 @@ router.get('/cuotas/', (req, res) => {
     if(data.length > 0){
         res.json(data);    
     } else {
-        res.send([]);
+        res.json([]);
     }
 });
 
@@ -27,7 +27,7 @@ router.get('/cuotas/:personaId/:cuotaId', (req, res) => {
     if(data.some(c => c.personaId == req.params.personaId && c.cuotaId == req.params.cuotaId)){
         res.json(data.filter(c => c.personaId == req.params.personaId && c.cuotaId == req.params.cuotaId));
     } else {
-        res.send([]);
+        res.json([]);
     }
 });
 

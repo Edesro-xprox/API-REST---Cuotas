@@ -6,7 +6,7 @@
     "numero": "922006477",
     "ubicacion": "Calle 211",
     "monto": 450000,
-    "estado": true
+    "estado": false
   },
   {
     "personaId": 2,
@@ -14,7 +14,7 @@
     "apellidos": "Espinoza Rodríguez",
     "numero": "978891282",
     "ubicacion": "Las Amanitas",
-    "monto": "6000",
+    "monto": 6000,
     "estado": true
   },
   {
@@ -23,7 +23,34 @@
     "apellidos": "Espinoza Rodríguez",
     "numero": "944005677",
     "ubicacion": "Las Amanitas",
-    "monto": "350000",
+    "monto": 350000,
     "estado": false
+  },
+  {
+    "personaId": 4,
+    "nombres": "Jair",
+    "apellidos": "Bedón",
+    "numero": "933045677",
+    "ubicacion": "Las Amanitas",
+    "monto": "12000",
+    "estado": true
+  },
+  {
+    "personaId": 5,
+    "nombres": "Jair Bedón",
+    "apellidos": "Bedonista",
+    "numero": "944005677",
+    "ubicacion": "Gambeta",
+    "monto": "12000",
+    "estado": true
+  },
+  {
+    "personaId": 6,
+    "nombres": "Pola",
+    "apellidos": "Polanski",
+    "numero": "949728155",
+    "ubicacion": "mz 41 lolte 5 urb previ",
+    "monto": "1500",
+    "estado": true
   }
 ]
